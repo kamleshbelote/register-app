@@ -23,7 +23,7 @@ pipeline {
        }
      }
      
-     stage("Test Application"){
+     stage("Test Application Updated"){
        steps {
          sh "mvn test"
        }

@@ -21,11 +21,6 @@ environment {
              		cleanWs()
            	}
      	}
-	
-	stage("Initialize") {
-		
-		env.PATH = "${dockerHome}/bin:${env.PATH}"
-	}
      	
 	stage("Checkout from SCM") {
        		steps {

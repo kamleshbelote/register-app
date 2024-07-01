@@ -19,7 +19,12 @@ environment {
            	steps {
              		cleanWs()
            	}
-     	}     
+     	}
+	
+	stage("Initialize") {
+		def dockerHome = tool 'myDocker'
+		env.PATH = "${dockerHome}/bin:${env.PATH}"
+	}
      	
 	stage("Checkout from SCM") {
        		steps {
